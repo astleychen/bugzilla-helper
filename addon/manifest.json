@@ -1,8 +1,8 @@
 {
-  "description": "Copy bug summary and translate it into wiki-friendly style",
+  "description": "Copy bug summary and turn it into wiki-friendly style",
   "manifest_version": 2,
   "name": "Bugzilla Helper",
-  "version": "0.5",
+  "version": "0.6",
   "homepage_url": "https://github.com/astleychen/bugzilla-helper",
   "icons": {
     "48": "icons/ic_view_list_black_24px.svg"

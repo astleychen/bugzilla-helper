@@ -1,4 +1,4 @@
-"use strict"; 
+"use strict";
 // ==UserScript==
 // @name        summary2wiki
 // @namespace   bugzilla
@@ -7,19 +7,25 @@
 // @version     1
 // @grant       GM_setClipboard
 // ==/UserScript==
-var title = document.querySelector(".bz_alias_short_desc_container")
+window.addEventListener("load", function load(event) {
+  window.removeEventListener("load", load, false); //remove listener, no longer needed
+  appendCopyButton();
+}, false);
 
-var button = document.createElement("input")
-button.type = "button"
-button.value = "Copy2Wiki"
-title.appendChild(button)
+function appendCopyButton() {
+  var title = document.querySelector(".bz_alias_short_desc_container")
+  var button = document.createElement("input")
+  button.type = "button"
+  button.value = "Copy2Wiki"
+  title.appendChild(button)
+}
 
-button.onclick = function(e) {
+button.onclick = function (e) {
   var bugid = document.querySelector(".bz_alias_short_desc_container > a > b")
   var bugdesc = document.querySelector("#short_desc_nonedit_display")
   var bugidtext = bugid.innerText;
   bugidtext = bugidtext.replace(/\s/g, '|')
-  var res  = "* {{" + bugidtext + "}} - " + bugdesc.innerHTML
+  var res = "* {{" + bugidtext + "}} - " + bugdesc.innerHTML
   // console.log(res)
 
   // A replacement for GM_setClipboard
@@ -32,5 +38,5 @@ function copyToClipboard(text) {
   document.body.appendChild(txtToCopy);
   txtToCopy.select();
   document.execCommand('copy');
-  txtToCopy.parentNode.removeChild(txtToCopy); 
+  txtToCopy.parentNode.removeChild(txtToCopy);
 }
