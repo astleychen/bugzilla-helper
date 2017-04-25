@@ -5,7 +5,7 @@ A Firefox WebExtension used as a helper on Mozilla Bugzilla bug pages.
 * Copy2Wiki - with a button attached with bug summary so that you are able to copy bug summary to wiki-formatted string.
 
 ## Download
-* [0.5](https://github.com/astleychen/bugzilla-helper/raw/master/bin/bugzilla_helper-0.5-an%2Bfx.xpi)
+* [0.6](https://github.com/astleychen/bugzilla-helper/raw/master/bin/bugzilla_helper-0.6-an%2Bfx.xpi)
 
 ## Changelog
 * 2017/02/21 - Initial version converted from Greasemonkey user script. [Originated with @mephisto41]
