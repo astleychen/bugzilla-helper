@@ -17,19 +17,19 @@ function appendCopyButton() {
   var button = document.createElement("input")
   button.type = "button"
   button.value = "Copy2Wiki"
+  button.onclick = function (e) {
+    var bugid = document.querySelector(".bz_alias_short_desc_container > a > b")
+    var bugdesc = document.querySelector("#short_desc_nonedit_display")
+    var bugidtext = bugid.innerText;
+    bugidtext = bugidtext.replace(/\s/g, '|')
+    var res = "* {{" + bugidtext + "}} - " + bugdesc.innerHTML
+    // console.log(res)
+
+    // A replacement for GM_setClipboard
+    copyToClipboard(res);
+  }
+
   title.appendChild(button)
-}
-
-button.onclick = function (e) {
-  var bugid = document.querySelector(".bz_alias_short_desc_container > a > b")
-  var bugdesc = document.querySelector("#short_desc_nonedit_display")
-  var bugidtext = bugid.innerText;
-  bugidtext = bugidtext.replace(/\s/g, '|')
-  var res = "* {{" + bugidtext + "}} - " + bugdesc.innerHTML
-  // console.log(res)
-
-  // A replacement for GM_setClipboard
-  copyToClipboard(res);
 }
 
 function copyToClipboard(text) {
