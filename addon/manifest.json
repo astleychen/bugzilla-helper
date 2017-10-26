@@ -1,9 +1,9 @@
 {
   "manifest_version": 2,
-  "name": "Bugzilla Helper",
-  "version": "0.7.1",
+  "name": "Bugzilla Copy",
+  "version": "0.8.0",
 
-  "description": "Copy bug summary and make it a wiki-friendly style",
+  "description": "Copy bug summary into clipboard with wiki-formatted style",
   "homepage_url": "https://github.com/astleychen/bugzilla-helper",
 
   "icons": {
@@ -12,7 +12,7 @@
 
   "applications": {
     "gecko": {
-      "id": "astleychen@mozilla.com"
+      "id": "astleychen@gmail.com"
     }
   },
 
